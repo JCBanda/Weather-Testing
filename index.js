@@ -15,9 +15,7 @@ console.dir(weatherIconDisplay)
 const weatherApi = async () => {
     try {
         const res = await axios.get("http://api.openweathermap.org/data/2.5/forecast?lat=52.229675&lon=21.012230&lang=pl&units=metric&appid=815888f306625879d7276ce175127bdb")
-        console.log(res.data)
-
-        const tempData = res.data.list[0].main.temp
+        
         cityName(res)
         description(res)
         temperature(res)
